@@ -1,0 +1,19 @@
+<ion-view view-title="Financeiro">
+  <ion-content>
+    <select ng-model="sel.semestre" ng-options="s for s in semestres"></select>
+
+
+    <div class="item item-text-wrap" ng-repeat="m in listar(sel.semestre)">
+      <h2>{{ m.mes }}</h2>
+      <p>Vencimento: {{ m.vencimento | date:'dd/MM/yyyy' }}</p>
+      <p>{{ m.valor | currency:'R$ ' }}
+        <span class="status" ng-class="m.status == 'Paga' ? 'paga' : 'apagar'">{{ m.status }}</span>
+      </p>
+      <div ng-if="m.status == 'A Pagar'">
+        <p>{{ m.codigo }}</p>
+        <button class="button button-small button-ucsal" ng-click="copiar(m)">Copiar Codigo de Barras</button>
+        <span ng-show="m.copiado">Copiado!</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

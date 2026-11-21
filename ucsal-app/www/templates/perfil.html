@@ -1,0 +1,20 @@
+<ion-view view-title="Atualizacao Cadastral">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input"><input ng-model="aluno.nome" ng-disabled="true"></label>
+      <label class="item item-input"><input ng-model="aluno.matricula" ng-disabled="true"></label>
+      <label class="item item-input"><input ng-model="aluno.curso" ng-disabled="true"></label>
+
+      <label class="item item-input"><input type="email" placeholder="E-mail" ng-model="dados.email"></label>
+      <label class="item item-input"><input type="tel" placeholder="Telefone / WhatsApp"
+          ng-model="dados.telefone"></label>
+      <label class="item item-input"><input placeholder="CEP" ng-model="dados.cep"></label>
+      <label class="item item-input"><input placeholder="Rua" ng-model="dados.rua"></label>
+      <label class="item item-input"><input placeholder="Bairro" ng-model="dados.bairro"></label>
+      <label class="item item-input"><input placeholder="Cidade" ng-model="dados.cidade"></label>
+    </div>
+    <div class="padding">
+      <button class="button button-block button-ucsal" ng-click="salvar()">Salvar Alteracoes</button>
+    </div>
+  </ion-content>
+</ion-view>

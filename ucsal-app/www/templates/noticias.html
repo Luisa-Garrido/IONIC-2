@@ -1,0 +1,19 @@
+<ion-view view-title="Mural UCSal">
+  <ion-content>
+    <select ng-model="filtro.categoria">
+      <option value="">Todas</option>
+      <option value="Noticia">Noticia</option>
+      <option value="Evento">Evento</option>
+    </select>
+
+    <div class="card" ng-repeat="p in publicacoes | filter:filtro">
+      <img class="card-img" src="img/ucsal.png">
+      <div class="item item-text-wrap">
+        <span ng-class="p.categoria == 'Evento' ? 'cat-evento' : 'cat-noticia'">{{ p.categoria }}</span>
+        - {{ p.data | date:'dd/MM/yyyy' }}
+        <h2>{{ p.titulo }}</h2>
+        <button class="button button-small button-ucsal" ui-sref="app.detalhe({id: p.id})">Ler mais</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

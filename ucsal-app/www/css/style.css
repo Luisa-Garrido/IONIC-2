@@ -1,0 +1,17 @@
+:root {
+  --azul-marinho: #0b2a5b;
+  --azul-claro: #3aa0e0;
+  --branco: #ffffff;
+}
+.bar-ucsal { background: var(--azul-marinho); }
+.bar-ucsal .title, .bar-ucsal .button { color: var(--branco); }
+.button-ucsal { background: var(--azul-marinho); border-color: var(--azul-marinho); color: var(--branco); }
+.login-bg { background: var(--azul-marinho); }
+.login-bg h2 { color: var(--branco); text-align: center; margin: 40px 0 20px; }
+.card-img { width: 100%; height: 140px; object-fit: cover; }
+.cat-noticia { color: var(--azul-marinho); font-weight: bold; }
+.cat-evento { color: var(--azul-claro); font-weight: bold; }
+.status { padding: 2px 8px; border-radius: 8px; color: var(--branco); }
+.paga { background: green; }
+.apagar { background: orange; }
+.erro { color: red; }

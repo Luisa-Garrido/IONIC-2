@@ -1,0 +1,18 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="login-bg padding">
+    <h2>Portal do Aluno UCSal</h2>
+    <div class="list card">
+      <label class="item item-input">
+        <input type="text" placeholder="Matricula" ng-model="form.matricula">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Senha" ng-model="form.senha">
+      </label>
+      <div class="padding">
+        <p class="erro" ng-if="erro">{{ erro }}</p>
+        <button class="button button-block button-ucsal" ng-click="entrar()"
+          ng-disabled="!form.matricula || !form.senha">Entrar</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
